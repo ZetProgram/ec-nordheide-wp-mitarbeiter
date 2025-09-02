@@ -19,7 +19,7 @@ Author: Fabian Bross
 Author URI: https://github.com/ZetProgram
 Text Domain: mitarbeiter
 Domain Path: /languages
-Version: 0.9.14
+Version: 1.0.0
 Requires PHP: 8.1
 */
 

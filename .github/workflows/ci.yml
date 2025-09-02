@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -f "composer.json" ] && [ -f "mitarbeiter.php" ]; then
+          if [ -f "composer.json" ] && [ -f "ec-mitarbeiter.php" ]; then
             echo "plugin_dir=." >> "$GITHUB_OUTPUT"
           elif [ -d "ec-nordheide-wp-mitarbeiter" ]; then
             echo "plugin_dir=ec-nordheide-wp-mitarbeiter" >> "$GITHUB_OUTPUT"

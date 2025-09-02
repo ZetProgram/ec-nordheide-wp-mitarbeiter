@@ -2,7 +2,7 @@
 /*
 Plugin Name: Mitarbeiter
 Description: Dieses Plugin ermöglicht die Erfassung von Mitarbeitern (oder Personen) in Bezug zu einer Funktion und einer Kategorie. Die Darstellung erfolgt mit Hilfe des Gutenberg Blocks "EC Mitarbeiter Einzeldarstellung 2.0". Benötigt wird das WordPress Plugin Block Lab.
-Version: 1.0.1
+Version: 1.0.2
 Author: Fabian Bross
 Plugin URI: https://github.com/ZetProgram/ec-nordheide-wp-mitarbeiter
 Update URI: https://github.com/ZetProgram/ec-nordheide-wp-mitarbeiter
@@ -564,7 +564,7 @@ function hole_wp_mitarbeiter_blocklab_mitarbeiterplugin($wp_mitarbeiter_id = "",
 }
 
 add_action('plugins_loaded', function () {
-    $puc = __DIR__ . '/vendor/plugin-update-checker/plugin-update-checker.php';
+    $puc = __DIR__ . '/lib/plugin-update-checker/plugin-update-checker.php';
     if (!file_exists($puc)) return;
     require_once $puc;
 

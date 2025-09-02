@@ -12,7 +12,7 @@ jobs:
     env:
       PLUGIN_SLUG: ec-nordheide-wp-mitarbeiter
       PLUGIN_DIR: ec-nordheide-wp-mitarbeiter
-      PLUGIN_MAIN: ec-nordheide-wp-mitarbeiter.php
+      PLUGIN_MAIN: ec-mitarbeiter.php
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,9 +22,17 @@ jobs:
       - name: Version aus Header lesen
         id: v
         run: |
-          VER=$(grep -iE '^[[:space:]]*\*[[:space:]]*Version:' "$PLUGIN_MAIN" | sed -E 's/.*Version:[[:space:]]*//')
-          if [ -z "$VER" ]; then
-            echo "Keine Version im Header gefunden in $PLUGIN_MAIN"; exit 1;
+          set -euo pipefail
+          FILE="$PLUGIN_MAIN"
+          if [ ! -f "$FILE" ]; then
+            echo "Datei nicht gefunden: $FILE"; exit 1;
+          fi
+          VER=$(awk '
+            BEGIN{IGNORECASE=1}
+            match($0,/^[[:space:]]*(\*|\/\/)?[[:space:]]*Version:[[:space:]]*([0-9][^[:space:]]*)/,m){print m[2]; exit}
+          ' "$FILE")
+          if [ -z "${VER:-}" ]; then
+            echo "Keine Version im Header gefunden in $FILE"; exit 1;
           fi
           echo "version=$VER" >> $GITHUB_OUTPUT
           echo "Version: $VER"

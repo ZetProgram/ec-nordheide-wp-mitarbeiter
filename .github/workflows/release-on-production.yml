@@ -12,7 +12,7 @@ jobs:
     env:
       PLUGIN_SLUG: ec-nordheide-wp-mitarbeiter
       PLUGIN_DIR: ec-nordheide-wp-mitarbeiter
-      PLUGIN_MAIN: we-mitarbeiter.php
+      PLUGIN_MAIN: ec-mitarbeiter.php
     steps:
       - name: Checkout
         uses: actions/checkout@v4

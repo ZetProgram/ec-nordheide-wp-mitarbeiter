@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+<style>
+	 .section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; }
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+.label{
+	width: 20%;
+}
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+	</style>
+
+<h2>Mitarbeiter Kategorien <a href="[[admin_url]]"><button class="button bold">Neu</button></a></h2>
+<div style="margin-bottom: 30px;">
+	<form name="quoteform" id="quoteform" class="wrap" method="post" action="[[admin_url]]">
+	
+	<!-- wp_mitarbeiter_name -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Bezeichnung:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_kategorien_bezeichnung" style="width:100%" value="[[wp_mitarbeiter_kategorien_bezeichnung]]"  />
+		</div>
+	</div>
+
+	<input type="hidden" name="action" value="speichern" />
+	<input type="hidden" name="edit_wp_mitarbeiter_kategorien_token" value="[[wp_mitarbeiter_kategorien_token]]" />
+	<input type="submit" name="save" class="button bold" value="Speichern" />
+	</form>
+</div>
+<div style="margin-bottom: 30px;">	
+	[[liste_kategorien]]
+</div>
+	
+	<h2>Mitarbeiter Funktionen <a href="[[admin_url]]"><button class="button bold">Neu</button></a></h2>
+<div style="margin-bottom: 30px;">
+	<form name="quoteform" id="quoteform" class="wrap" method="post" action="[[admin_url]]">
+	
+	<!-- wp_mitarbeiter_name -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Bezeichnung:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_funktionen_bezeichnung" style="width:100%" value="[[wp_mitarbeiter_funktionen_bezeichnung]]"  />
+		</div>
+	</div>
+
+	<input type="hidden" name="action" value="speichern" />
+	<input type="hidden" name="edit_wp_mitarbeiter_funktionen_token" value="[[wp_mitarbeiter_funktionen_token]]" />
+	<input type="submit" name="save" class="button bold" value="Speichern" />
+	</form>
+</div>
+<div style="margin-bottom: 30px;">	
+	[[liste_funktionen]]
+</div>

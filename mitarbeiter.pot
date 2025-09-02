@@ -1,0 +1,632 @@
+# Mitarbeiter translation file
+# Copyright (C) 2015 Kieran O'Shea
+# This file is distributed under the same license as the Mitarbeiter package.
+# Kieran O'Shea <kieran@kieranoshea.com>, 2015
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mitarbeiter-1.3.8\n"
+"Report-Msgid-Bugs-To: Kieran O'Shea <kieran@kieranoshea.com>\n"
+"POT-Creation-Date: 2015-09-22 20:42-0000\n"
+"PO-Revision-Date: 2015-09-22 20:42-0000\n"
+"Last-Translator: Kieran O'Shea <kieran@kieranoshea.com>\n"
+"Language-Team: Kieran O'Shea <kieran@kieranoshea.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. #-#-#-#-#  plugin.pot (Mitarbeiter 1.3.3)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: mitarbeiter.php:137 mitarbeiter.php:2345 mitarbeiter.php:2372
+msgid "Mitarbeiter"
+msgstr ""
+
+#: mitarbeiter.php:88
+msgid "Warning"
+msgstr ""
+
+#: mitarbeiter.php:141
+msgid "Manage Mitarbeiter"
+msgstr ""
+
+#: mitarbeiter.php:144 mitarbeiter.php:2075
+msgid "Manage Categories"
+msgstr ""
+
+#: mitarbeiter.php:145
+msgid "Mitarbeiter Config"
+msgstr ""
+
+#: mitarbeiter.php:145 mitarbeiter.php:1832
+msgid "Mitarbeiter Options"
+msgstr ""
+
+#: mitarbeiter.php:798 mitarbeiter.php:2087
+msgid "ID"
+msgstr ""
+
+#: mitarbeiter.php:799 mitarbeiter.php:2364 mitarbeiter.php:2405 mitarbeiter.php:2446
+msgid "Title"
+msgstr ""
+
+#: mitarbeiter.php:800 mitarbeiter.php:957
+msgid "Start Date"
+msgstr ""
+
+#: mitarbeiter.php:801 mitarbeiter.php:982
+msgid "End Date"
+msgstr ""
+
+#: mitarbeiter.php:802 mitarbeiter.php:2480
+msgid "Time"
+msgstr ""
+
+#: mitarbeiter.php:803
+msgid "Recurs"
+msgstr ""
+
+#: mitarbeiter.php:804
+msgid "Repeats"
+msgstr ""
+
+#: mitarbeiter.php:805 mitarbeiter.php:1843
+msgid "Author"
+msgstr ""
+
+#: mitarbeiter.php:806
+msgid "Category"
+msgstr ""
+
+#: mitarbeiter.php:807 mitarbeiter.php:848 mitarbeiter.php:2090 mitarbeiter.php:2104
+msgid "Edit"
+msgstr ""
+
+#: mitarbeiter.php:808 mitarbeiter.php:850 mitarbeiter.php:2091 mitarbeiter.php:2113
+msgid "Delete"
+msgstr ""
+
+#: mitarbeiter.php:822 mitarbeiter.php:836 mitarbeiter.php:2108
+msgid "N/A"
+msgstr ""
+
+#: mitarbeiter.php:826
+msgid "Never"
+msgstr ""
+
+#: mitarbeiter.php:827
+msgid "Weekly"
+msgstr ""
+
+#: mitarbeiter.php:828
+msgid "Monthly (date)"
+msgstr ""
+
+#: mitarbeiter.php:829
+msgid "Monthly (day)"
+msgstr ""
+
+#: mitarbeiter.php:830
+msgid "Yearly"
+msgstr ""
+
+#: mitarbeiter.php:837
+msgid "Forever"
+msgstr ""
+
+#: mitarbeiter.php:838
+msgid "Times"
+msgstr ""
+
+#: mitarbeiter.php:850
+msgid "Are you sure you want to delete this event?"
+msgstr ""
+
+#: mitarbeiter.php:861
+msgid "There are no events in the database!"
+msgstr ""
+
+#: mitarbeiter.php:877
+msgid "Bad Monkey! No banana!"
+msgstr ""
+
+#: mitarbeiter.php:885
+msgid "An event with that ID couldn't be found"
+msgstr ""
+
+#: mitarbeiter.php:920
+msgid "Event Title"
+msgstr ""
+
+#: mitarbeiter.php:925
+msgid "Event Description"
+msgstr ""
+
+#: mitarbeiter.php:929
+msgid "Event Category"
+msgstr ""
+
+#: mitarbeiter.php:953
+msgid "Event Link (Optional)"
+msgstr ""
+
+#: mitarbeiter.php:1005
+msgid "Time (hh:mm)"
+msgstr ""
+
+#: mitarbeiter.php:1023
+msgid "Optional, set blank if not required."
+msgstr ""
+
+#: mitarbeiter.php:1023
+msgid "Current time difference from GMT is "
+msgstr ""
+
+#: mitarbeiter.php:1023
+msgid " hour(s)"
+msgstr ""
+
+#: mitarbeiter.php:1027
+msgid "Recurring Events"
+msgstr ""
+
+#: mitarbeiter.php:1072
+msgid "Repeats for"
+msgstr ""
+
+#: mitarbeiter.php:1075
+msgid "None"
+msgstr ""
+
+#: mitarbeiter.php:1076
+msgid "Weeks"
+msgstr ""
+
+#: mitarbeiter.php:1077
+msgid "Months (date)"
+msgstr ""
+
+#: mitarbeiter.php:1078
+msgid "Months (day)"
+msgstr ""
+
+#: mitarbeiter.php:1079
+msgid "Years"
+msgstr ""
+
+#: mitarbeiter.php:1081
+msgid ""
+"Entering 0 means forever. Where the recurrance interval is left at none, the "
+"event will not reoccur."
+msgstr ""
+
+#: mitarbeiter.php:1088 mitarbeiter.php:1918 mitarbeiter.php:2017 mitarbeiter.php:2073
+msgid "Save"
+msgstr ""
+
+#: mitarbeiter.php:1152 mitarbeiter.php:1181 mitarbeiter.php:1188 mitarbeiter.php:1195
+#: mitarbeiter.php:1220 mitarbeiter.php:1231 mitarbeiter.php:1242 mitarbeiter.php:1254
+#: mitarbeiter.php:1269 mitarbeiter.php:1316 mitarbeiter.php:1346 mitarbeiter.php:1353
+#: mitarbeiter.php:1360 mitarbeiter.php:1385 mitarbeiter.php:1396 mitarbeiter.php:1407
+#: mitarbeiter.php:1419 mitarbeiter.php:1465 mitarbeiter.php:1470 mitarbeiter.php:1491
+#: mitarbeiter.php:1542 mitarbeiter.php:1968 mitarbeiter.php:1981 mitarbeiter.php:2026
+msgid "Error"
+msgstr ""
+
+#: mitarbeiter.php:1152
+msgid "Security check failure, try adding the event again"
+msgstr ""
+
+#: mitarbeiter.php:1181 mitarbeiter.php:1346
+msgid ""
+"Your event end date must be either after or the same as your event begin date"
+msgstr ""
+
+#: mitarbeiter.php:1188 mitarbeiter.php:1353
+msgid ""
+"Your date formatting is correct but one or more of your dates is invalid. "
+"Check for number of days in month and leap year related errors."
+msgstr ""
+
+#: mitarbeiter.php:1195 mitarbeiter.php:1360
+msgid ""
+"Both start and end dates must be entered and be in the format YYYY-MM-DD"
+msgstr ""
+
+#: mitarbeiter.php:1220 mitarbeiter.php:1385
+msgid "The time field must either be blank or be entered in the format hh:mm"
+msgstr ""
+
+#: mitarbeiter.php:1231 mitarbeiter.php:1396
+msgid ""
+"The URL entered must either be prefixed with http(s):// or be completely blank"
+msgstr ""
+
+#: mitarbeiter.php:1242 mitarbeiter.php:1407
+msgid "The event title must be between 1 and 30 characters in length"
+msgstr ""
+
+#: mitarbeiter.php:1254 mitarbeiter.php:1419
+msgid ""
+"The repetition value must be 0 unless a type of recurrance is selected in "
+"which case the repetition value must be 0 or higher"
+msgstr ""
+
+#: mitarbeiter.php:1269
+msgid ""
+"An event with the details you submitted could not be found in the database. "
+"This may indicate a problem with your database or the way in which it is "
+"configured."
+msgstr ""
+
+#: mitarbeiter.php:1276
+msgid "Event added. It will now show in your mitarbeiter."
+msgstr ""
+
+#: mitarbeiter.php:1311 mitarbeiter.php:1432
+msgid "Failure"
+msgstr ""
+
+#: mitarbeiter.php:1311
+msgid "You can't update an event if you haven't submitted an event id"
+msgstr ""
+
+#: mitarbeiter.php:1316
+msgid "Security check failure, try editing the event again"
+msgstr ""
+
+#: mitarbeiter.php:1432
+msgid ""
+"The database failed to return data to indicate the event has been updated "
+"sucessfully. This may indicate a problem with your database or the way in "
+"which it is configured."
+msgstr ""
+
+#: mitarbeiter.php:1439
+msgid "Event updated successfully"
+msgstr ""
+
+#: mitarbeiter.php:1465
+msgid "You can't delete an event if you haven't submitted an event id"
+msgstr ""
+
+#: mitarbeiter.php:1470
+msgid "Security check failure, try deleting the event again"
+msgstr ""
+
+#: mitarbeiter.php:1485
+msgid "Event deleted successfully"
+msgstr ""
+
+#: mitarbeiter.php:1491
+msgid ""
+"Despite issuing a request to delete, the event still remains in the "
+"database. Please investigate."
+msgstr ""
+
+#: mitarbeiter.php:1507
+msgid "Edit Event"
+msgstr ""
+
+#: mitarbeiter.php:1511
+msgid "You must provide an event id in order to edit it"
+msgstr ""
+
+#: mitarbeiter.php:1521
+msgid "Add Event"
+msgstr ""
+
+#: mitarbeiter.php:1524
+msgid "Manage Events"
+msgstr ""
+
+#: mitarbeiter.php:1542
+msgid "Security check failure, try editing the config again"
+msgstr ""
+
+#: mitarbeiter.php:1640
+msgid "Settings saved"
+msgstr ""
+
+#: mitarbeiter.php:1839
+msgid "Choose the lowest user group that may manage events"
+msgstr ""
+
+#: mitarbeiter.php:1841
+msgid "Subscriber"
+msgstr ""
+
+#: mitarbeiter.php:1842
+msgid "Contributor"
+msgstr ""
+
+#: mitarbeiter.php:1844
+msgid "Editor"
+msgstr ""
+
+#: mitarbeiter.php:1845
+msgid "Administrator"
+msgstr ""
+
+#: mitarbeiter.php:1850
+msgid "Do you want to display the author name on events?"
+msgstr ""
+
+#: mitarbeiter.php:1852 mitarbeiter.php:1860 mitarbeiter.php:1868 mitarbeiter.php:1876
+#: mitarbeiter.php:1885 mitarbeiter.php:1893 mitarbeiter.php:1904
+msgid "Yes"
+msgstr ""
+
+#: mitarbeiter.php:1853 mitarbeiter.php:1861 mitarbeiter.php:1869 mitarbeiter.php:1877
+#: mitarbeiter.php:1886 mitarbeiter.php:1894 mitarbeiter.php:1905
+msgid "No"
+msgstr ""
+
+#: mitarbeiter.php:1858
+msgid "Display a jumpbox for changing month and year quickly?"
+msgstr ""
+
+#: mitarbeiter.php:1866
+msgid "Display todays events?"
+msgstr ""
+
+#: mitarbeiter.php:1874
+msgid "Display upcoming events?"
+msgstr ""
+
+#: mitarbeiter.php:1879
+msgid "for"
+msgstr ""
+
+#: mitarbeiter.php:1879
+msgid "days into the future"
+msgstr ""
+
+#: mitarbeiter.php:1883
+msgid "Enable event categories?"
+msgstr ""
+
+#: mitarbeiter.php:1891
+msgid "Enable iMitarbeiter feed?"
+msgstr ""
+
+#: mitarbeiter.php:1899
+msgid "Enable attribution link?"
+msgstr ""
+
+#: mitarbeiter.php:1910
+msgid "Configure the stylesheet for Mitarbeiter"
+msgstr ""
+
+#: mitarbeiter.php:1912
+msgid "Tick this box if you wish to reset the Mitarbeiter style to default"
+msgstr ""
+
+#: mitarbeiter.php:1968
+msgid "Security check failure, try adding the category again"
+msgstr ""
+
+#: mitarbeiter.php:1974
+msgid "Category added successfully"
+msgstr ""
+
+#: mitarbeiter.php:1981
+msgid "Security check failure, try deleting the category again"
+msgstr ""
+
+#: mitarbeiter.php:1988
+msgid "Category deleted successfully"
+msgstr ""
+
+#: mitarbeiter.php:1997
+msgid "Edit Category"
+msgstr ""
+
+#: mitarbeiter.php:2006 mitarbeiter.php:2062 mitarbeiter.php:2088
+msgid "Category Name"
+msgstr ""
+
+#: mitarbeiter.php:2010 mitarbeiter.php:2066
+msgid "Category Colour (Hex format)"
+msgstr ""
+
+#: mitarbeiter.php:2026
+msgid "Security check failure, try editing the category again"
+msgstr ""
+
+#: mitarbeiter.php:2032
+msgid "Category edited successfully"
+msgstr ""
+
+#: mitarbeiter.php:2053
+msgid "Add Category"
+msgstr ""
+
+#: mitarbeiter.php:2089
+msgid "Category Colour"
+msgstr ""
+
+#: mitarbeiter.php:2113
+msgid "Are you sure you want to delete this category?"
+msgstr ""
+
+#: mitarbeiter.php:2126
+msgid "There are no categories in the database - something has gone wrong!"
+msgstr ""
+
+#: mitarbeiter.php:2200 mitarbeiter.php:2207
+msgid "Next"
+msgstr ""
+
+#: mitarbeiter.php:2220 mitarbeiter.php:2227
+msgid "Prev"
+msgstr ""
+
+#: mitarbeiter.php:2258 mitarbeiter.php:2297 mitarbeiter.php:3042
+msgid "all day"
+msgstr ""
+
+#: mitarbeiter.php:2261 mitarbeiter.php:2300 mitarbeiter.php:3042
+msgid "at"
+msgstr ""
+
+#: mitarbeiter.php:2366 mitarbeiter.php:2407 mitarbeiter.php:2448
+msgid "Comma separated category id list"
+msgstr ""
+
+#: mitarbeiter.php:2386 mitarbeiter.php:2413
+msgid "Today's Events"
+msgstr ""
+
+#: mitarbeiter.php:2427 mitarbeiter.php:2454
+msgid "Upcoming Events"
+msgstr ""
+
+#: mitarbeiter.php:2485
+msgid "Posted by"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Sunday"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Monday"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Tuesday"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Wednesday"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Thursday"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Friday"
+msgstr ""
+
+#: mitarbeiter.php:2736 mitarbeiter.php:2741
+msgid "Saturday"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2845 mitarbeiter.php:3072
+msgid "January"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2846 mitarbeiter.php:3072
+msgid "February"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2847 mitarbeiter.php:3072
+msgid "March"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2848 mitarbeiter.php:3072
+msgid "April"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2849 mitarbeiter.php:3072
+msgid "May"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2850 mitarbeiter.php:3072
+msgid "June"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2851 mitarbeiter.php:3072
+msgid "July"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2852 mitarbeiter.php:3073
+msgid "August"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2853 mitarbeiter.php:3073
+msgid "September"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2854 mitarbeiter.php:3073
+msgid "October"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2855 mitarbeiter.php:3073
+msgid "November"
+msgstr ""
+
+#: mitarbeiter.php:2745 mitarbeiter.php:2856 mitarbeiter.php:3073
+msgid "December"
+msgstr ""
+
+#: mitarbeiter.php:2844
+msgid "Month"
+msgstr ""
+
+#: mitarbeiter.php:2858
+msgid "Year"
+msgstr ""
+
+#: mitarbeiter.php:2891
+msgid "Go"
+msgstr ""
+
+#: mitarbeiter.php:2995
+msgid "Category Key"
+msgstr ""
+
+#: mitarbeiter.php:3017
+msgid "Mitarbeiter developed and supported by "
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "Su"
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "Mo"
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "Tu"
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "We"
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "Th"
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "Fr"
+msgstr ""
+
+#: mitarbeiter.php:3063 mitarbeiter.php:3068
+msgid "Sa"
+msgstr ""
+
+#: mitarbeiter.php:3248
+msgid "Mitarbeiter by "
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Mitarbeiter 1.3.3)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  plugin.pot (Mitarbeiter 1.3.3)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://www.kieranoshea.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin allows you to display a mitarbeiter of all your events and "
+"appointments as a page on your site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kieran O'Shea"
+msgstr ""

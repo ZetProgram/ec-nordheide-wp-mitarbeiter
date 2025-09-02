@@ -1,8 +1,17 @@
 <?php
-
-
-
-
+/*
+Plugin Name: Mitarbeiter
+Description: Dieses Plugin ermöglicht die Erfassung von Mitarbeitern (oder Personen) in Bezug zu einer Funktion und einer Kategorie. Die Darstellung erfolgt mit Hilfe des Gutenberg Blocks "EC Mitarbeiter Einzeldarstellung 2.0". Benötigt wird das WordPress Plugin Block Lab.
+Version: 1.0.0
+Author: Fabian Bross
+Plugin URI: https://github.com/ZetProgram/ec-nordheide-wp-mitarbeiter
+Author URI: https://github.com/ZetProgram
+Text Domain: mitarbeiter
+Domain Path: /languages
+Requires PHP: 8.1
+Requires at least: 5.8
+Tested up to: 6.8.2
+*/
 include('mitarbeiter_menu.php');
 include('sonstige_funktionen.php');
 include('mitarbeiter_config.php');
@@ -11,17 +20,7 @@ include('mitarbeiter_categories.php');
 define("TPL_VERZ",plugin_dir_path(__FILE__).'/tpl');
 //define("SUPERADMIN","&superadmin=1");
 define("SUPERADMIN","");
-/*
-Plugin Name: Mitarbeiter
-Plugin URI: https://github.com/ZetProgram/ec-nordheide-wp-mitarbeiter
-Description: Dieses Plugin ermöglicht die Erfassung von Mitarbeitern (oder Personen) in Bezug zu einer Funktion und einer Kategorie. Die Darstellung erfolgt mit Hilfe des Gutenberg Blocks "EC Mitarbeiter Einzeldarstellung 2.0". Benötigt wird das WordPress Plugin Block Lab.
-Author: Fabian Bross
-Author URI: https://github.com/ZetProgram
-Text Domain: mitarbeiter
-Domain Path: /languages
-Version: 1.0.0
-Requires PHP: 8.1
-*/
+
 
 // Direct access shouldn't be allowed
 if ( ! defined( 'ABSPATH' ) ) exit;

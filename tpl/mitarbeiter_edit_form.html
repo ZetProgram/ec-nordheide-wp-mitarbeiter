@@ -1,0 +1,129 @@
+<style>
+	 .section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; }
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+.label{
+	width: 20%;
+}
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+	</style>
+        <div id="" style=""></div>
+		<h2>Mitarbeiter verwalten <a href="[[admin_url]]"><button class="button bold">Neu</button></a></h2>
+	<form name="quoteform" id="quoteform" class="wrap" method="post" action="[[admin_url]]">
+	
+	<!-- wp_mitarbeiter_name -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Name:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_name" style="width:100%" value="[[wp_mitarbeiter_name]]"  />
+		</div>
+	</div>
+	<!-- wp_mitarbeiter_vorname -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Vorname:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_vorname" style="width:100%" value="[[wp_mitarbeiter_vorname]]"  />
+		</div>
+	</div>
+	<!-- wp_mitarbeiter_email -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			E-Mail:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_email" style="width:100%" value="[[wp_mitarbeiter_email]]"  />
+		</div>
+	</div>
+	<!-- wp_mitarbeiter_telefon -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Telefon:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_telefon" style="width:100%" value="[[wp_mitarbeiter_telefon]]"  />
+		</div>
+	</div>
+	<!-- wp_mitarbeiter_kategorie -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Kategorie:
+		</div>
+		<div class="col span_1_of_2">
+			<select name="wp_mitarbeiter_kategorien_id" style="width:100%">
+				[[optionen__wp_mitarbeiter_kategorien]]
+			</select>
+			<!-- <input type="text" name="wp_mitarbeiter_kategorie" style="width:100%" value="[[wp_mitarbeiter_kategorie]]"  /> -->
+		</div>
+	</div>
+		<!-- wp_mitarbeiter_funktion -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Funktion:
+		</div>
+		<div class="col span_1_of_2">
+			<select name="wp_mitarbeiter_funktionen_id" style="width:100%">
+				[[optionen__wp_mitarbeiter_funktionen]]
+			</select>
+			<!-- <input type="text" name="wp_mitarbeiter_funktion" style="width:100%" value="[[wp_mitarbeiter_funktion]]"  /> -->
+		</div>
+	</div>
+	<!-- wp_mitarbeiter_geburtsdatum 
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Geburtsdatum:
+		</div>
+		<div class="col span_1_of_2">
+			<input type="text" name="wp_mitarbeiter_geburtsdatum" style="width:100%" value="[[wp_mitarbeiter_geburtsdatum]]"  />
+		</div>
+	</div>-->
+		<!-- wp_mitarbeiter_geburtsdatum -->
+	<div class="section group">
+		<div class="col span_1_of_2 label">
+			Bild:
+		</div>
+		<div class="col span_1_of_2">
+			
+<input class="form-control" type="hidden" name="wp_mitarbeiter_bildurl" value="[[wp_mitarbeiter_bildurl]]">
+<img id="bild_wp_mitarbeiter_bildurl" src="[[wp_mitarbeiter_bildurl]]" style="max-width: 150px;"><br />
+<span class="input-group-addon" title="Ändern">
+<a href="#" class="sw-mediabild" data-feld="wp_mitarbeiter_bildurl">ändern</a>
+</span>
+		
+		</div>
+	</div>
+	<input type="hidden" name="action" value="edit_mitarbeiter" />
+	<input type="hidden" name="wp_mitarbeiter_token" value="[[wp_mitarbeiter_token]]" />
+	<input type="submit" name="save" class="button bold" value="Speichern" />
+	</form>

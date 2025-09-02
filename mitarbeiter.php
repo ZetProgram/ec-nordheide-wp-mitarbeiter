@@ -2,9 +2,10 @@
 /*
 Plugin Name: Mitarbeiter
 Description: Dieses Plugin ermöglicht die Erfassung von Mitarbeitern (oder Personen) in Bezug zu einer Funktion und einer Kategorie. Die Darstellung erfolgt mit Hilfe des Gutenberg Blocks "EC Mitarbeiter Einzeldarstellung 2.0". Benötigt wird das WordPress Plugin Block Lab.
-Version: 1.0.0
+Version: 1.0.1
 Author: Fabian Bross
 Plugin URI: https://github.com/ZetProgram/ec-nordheide-wp-mitarbeiter
+Update URI: https://github.com/ZetProgram/ec-nordheide-wp-mitarbeiter
 Author URI: https://github.com/ZetProgram
 Text Domain: mitarbeiter
 Domain Path: /languages
@@ -24,6 +25,64 @@ define("SUPERADMIN","");
 
 // Direct access shouldn't be allowed
 if ( ! defined( 'ABSPATH' ) ) exit;
+
+function ec_mitarbeiter_activate() {
+    global $wpdb;
+
+    // Erwartete Tabellen
+    $table_mitarbeiter        = $wpdb->prefix . 'mitarbeiter';
+    $table_funktionen         = $wpdb->prefix . 'mitarbeiter_funktionen';
+    $table_kategorien         = $wpdb->prefix . 'mitarbeiter_kategorien';
+
+    // Beispiel: prüfen, ob Tabelle existiert
+    if ($wpdb->get_var("SHOW TABLES LIKE '$table_mitarbeiter'") != $table_mitarbeiter) {
+        // Alte Tabelle hieß evtl. anders? Dann hier Mapping ergänzen
+        $old_table = $wpdb->prefix . 'alte_mitarbeiter';
+        if ($wpdb->get_var("SHOW TABLES LIKE '$old_table'") == $old_table) {
+            // Umbenennen
+            $wpdb->query("RENAME TABLE $old_table TO $table_mitarbeiter");
+        } else {
+            // Falls gar nicht da: neu anlegen
+            $wpdb->query("
+                CREATE TABLE $table_mitarbeiter (
+                    wp_mitarbeiter_id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                    wp_mitarbeiter_name varchar(255) NOT NULL,
+                    wp_mitarbeiter_vorname varchar(255) NOT NULL,
+                    wp_mitarbeiter_email varchar(255),
+                    wp_mitarbeiter_telefon varchar(50),
+                    wp_mitarbeiter_bildurl text,
+                    wp_mitarbeiter_token varchar(64),
+                    wp_mitarbeiter_sichtbar tinyint(1) DEFAULT 1,
+                    PRIMARY KEY  (wp_mitarbeiter_id)
+                ) DEFAULT CHARSET=utf8mb4;
+            ");
+        }
+    }
+
+    // Beispiel: prüfen, ob Spalte fehlt und hinzufügen
+    $columns = $wpdb->get_col("DESC $table_mitarbeiter", 0);
+    if (!in_array('wp_mitarbeiter_bildurl', $columns)) {
+        $wpdb->query("ALTER TABLE $table_mitarbeiter ADD wp_mitarbeiter_bildurl TEXT DEFAULT ''");
+    }
+    if (!in_array('wp_mitarbeiter_token', $columns)) {
+        $wpdb->query("ALTER TABLE $table_mitarbeiter ADD wp_mitarbeiter_token varchar(64)");
+    }
+
+    // Gleiche Checks für Funktionen- und Kategorien-Tabelle
+    foreach ([$table_funktionen, $table_kategorien] as $table) {
+        if ($wpdb->get_var("SHOW TABLES LIKE '$table'") != $table) {
+            $wpdb->query("
+                CREATE TABLE $table (
+                    id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                    bezeichnung varchar(255) NOT NULL,
+                    sichtbar tinyint(1) DEFAULT 1,
+                    PRIMARY KEY (id)
+                ) DEFAULT CHARSET=utf8mb4;
+            ");
+        }
+    }
+}
+register_activation_hook(__FILE__, 'ec_mitarbeiter_activate');
 
 // Enable internationalisation
 function mitarbeiter_load_text_domain() {

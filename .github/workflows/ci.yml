@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["production"]
+    branches: ["**"]
   pull_request:
 
 jobs:
@@ -13,6 +13,20 @@ jobs:
         php: ["8.1", "8.2", "8.3"]
     steps:
       - uses: actions/checkout@v4
+
+      - name: Locate plugin directory
+        id: loc
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f "composer.json" ] && [ -f "mitarbeiter.php" ]; then
+            echo "plugin_dir=." >> "$GITHUB_OUTPUT"
+          elif [ -d "ec-nordheide-wp-mitarbeiter" ]; then
+            echo "plugin_dir=ec-nordheide-wp-mitarbeiter" >> "$GITHUB_OUTPUT"
+          else
+            echo "Could not find plugin directory"; exit 1
+          fi
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -22,12 +36,12 @@ jobs:
       - name: Install dependencies
         run: |
           composer install --no-interaction --prefer-dist
-        working-directory: ./ec-nordheide-wp-mitarbeiter
+        working-directory: ${{ steps.loc.outputs.plugin_dir }}
       - name: Syntax check
         run: |
           find . -type f -name "*.php" -not -path "./vendor/*" -print0 | xargs -0 -n1 -P4 php -l
-        working-directory: ./ec-nordheide-wp-mitarbeiter
+        working-directory: ${{ steps.loc.outputs.plugin_dir }}
       - name: WordPress Coding Standards
         run: |
           vendor/bin/phpcs -p --standard=ruleset.xml .
-        working-directory: ./ec-nordheide-wp-mitarbeiter
+        working-directory: ${{ steps.loc.outputs.plugin_dir }}
